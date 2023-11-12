@@ -8,7 +8,7 @@ games = [
     monte_carlo_Consecutive_Colors
 ]
 
-number_of_simulations = 100,000
+number_of_simulations = 100000
 for game in games:
         probability, score, round_won = game(number_of_simulations)
         game_name = game.__name__.replace("monte_carlo_", "").replace("_", " ")
