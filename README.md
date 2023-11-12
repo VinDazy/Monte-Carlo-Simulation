@@ -38,6 +38,11 @@ The statistical output includes the probability of winning, rounds won, and play
 1. **Running Simulations**
     - Ensure you have Python installed.
     - Run the script with the desired number of simulations (default : 100,000).
+    - For a single deck game, set the number_of_simulation to 1.
+
+
+    
+    - Example 
   
     ```bash
     python main.py 100000
