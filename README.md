@@ -6,7 +6,7 @@ This repository contains Monte Carlo simulations for various card games. The sim
 
 The statistical output includes the probability of winning, rounds won, and player score for each game. The numbers are based on 100,000 simulations and a `fixed seed of 619`.
 
-| Game               | Probability | Rounds Won | Score   |
+| Game               | Probability | Rounds Won | Money Made   |
 | ------------------ | ----------- | ---------- | ------- |
 | Sahara Ace         | 7.72%       | 7717       | 77,170   |
 | Tunisian Twins     | 53.08%      | 53077      | 2,653,850 |
@@ -41,7 +41,7 @@ The statistical output includes the probability of winning, rounds won, and play
     - For a single deck game, set the number_of_simulation to 1.
 
 
-    
+
     - Example 
   
     ```bash
