@@ -1,4 +1,7 @@
 import random
+import sys
+import matplotlib.pyplot as plt
+import numpy as np
 random.seed(619)
 ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
 suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
@@ -133,3 +136,32 @@ def monte_carlo_Consecutive_Colors(num_simulations):
 
     probability_of_winning = round_won / num_simulations
     return probability_of_winning, player_credit,round_won
+
+def save_probability_bar_chart(game_names, probabilities, filename):
+    plt.figure(figsize=(10, 6))
+    colors = plt.cm.viridis(np.linspace(0, 1, len(game_names)))
+    bars = plt.bar(game_names, probabilities, color=colors)
+    add_value_labels(bars)
+    plt.ylabel("Winning Probability (%)")
+    plt.title("Winning Probability of Each Game")
+    plt.xticks(rotation=45, ha='right')
+    plt.tight_layout()
+    plt.savefig(filename)
+    plt.close()
+
+def save_money_made_bar_chart(game_names, money_made, filename):
+    plt.figure(figsize=(10, 6))
+    colors = plt.cm.viridis(np.linspace(0, 1, len(game_names)))
+    bars = plt.bar(game_names, money_made, color=colors)
+    add_value_labels(bars)
+    plt.ylabel("Money Made")
+    plt.title("Money Made from Each Game")
+    plt.xticks(rotation=45, ha='right')
+    plt.tight_layout()
+    plt.savefig(filename)
+    plt.close()
+
+def add_value_labels(bars):
+    for bar in bars:
+        yval = bar.get_height()
+        plt.text(bar.get_x() + bar.get_width()/2, yval + 0.01, round(yval, 2), ha='center', va='bottom')
