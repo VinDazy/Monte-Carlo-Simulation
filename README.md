@@ -11,7 +11,7 @@ The statistical output includes the probability of winning, rounds won, and play
 | Sahara Ace         | 7.72%       | 7717       | 77,170   |
 | Tunisian Twins     | 53.08%      | 53077      | 2,653,850 |
 | Medina Biggie      | 46.70%      | 46695      | 93,390   |
-| Desert Hearts      | 58.40%      | 58405      | 2       |
+| Desert Hearts      | 58.40%      | 58405      | 75,010      |
 | Oasis Runny        | 20.54%      | 20540      | 102,700  |
 | Consecutive Colors | 35.22%      | 35222      | 528,330  |
 

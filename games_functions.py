@@ -63,15 +63,17 @@ def monte_carlo_Medina_Biggie(num_simulations):
 
 
 def monte_carlo_Desert_Hearts(num_simulations):
-    player_credit=0
-    round_won=0
+    player_credit = 0
+    round_won = 0
     for _ in range(num_simulations):
         hand = draw_cards(3)
-        if any(card['suit'] == 'Hearts' for card in hand):
-            player_credit=sum(1 for card in hand if card['suit'] == 'Hearts')
-            round_won+=1
+        hearts_count = sum(1 for card in hand if card['suit'] == 'Hearts')
+        if hearts_count > 0:
+            player_credit += hearts_count
+            round_won += 1
     probability_of_winning = round_won / num_simulations
-    return probability_of_winning, player_credit,round_won
+    return probability_of_winning, player_credit, round_won
+
 
 
 
