@@ -151,7 +151,11 @@ def save_probability_bar_chart(game_names, probabilities, filename):
     plt.savefig(filename)
     plt.close()
 
-def save_money_made_bar_chart(game_names, money_made, filename):
+def save_money_made_bar_chart(game_names, money_made, filename, sort_descending=False):
+    if sort_descending:
+        sorted_data = sorted(zip(game_names, money_made), key=lambda x: x[1], reverse=True)
+        game_names, money_made = zip(*sorted_data)
+
     plt.figure(figsize=(10, 6))
     colors = plt.cm.viridis(np.linspace(0, 1, len(game_names)))
     bars = plt.bar(game_names, money_made, color=colors)
@@ -162,6 +166,7 @@ def save_money_made_bar_chart(game_names, money_made, filename):
     plt.tight_layout()
     plt.savefig(filename)
     plt.close()
+
 
 def add_value_labels(bars):
     for bar in bars:

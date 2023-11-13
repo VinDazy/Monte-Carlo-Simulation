@@ -35,7 +35,7 @@ def main():
 
     # Generate and save vertical bar charts with labels
     save_probability_bar_chart(game_names, probabilities, "winning_probability_bar_chart.png")
-    save_money_made_bar_chart(game_names, money_made, "money_made_bar_chart.png")
+    save_money_made_bar_chart(game_names, money_made, "money_made_bar_chart.png",sort_descending=True)
 
     print("Bar charts successfully saved in the current working directory.")
 if __name__ == "__main__":
