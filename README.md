@@ -61,5 +61,6 @@ The statistical output includes the probability of winning, rounds won, and play
 4. **Adjusting Simulations**
     - You can modify the `number_of_simulations` variable to adjust the number of simulations.
     - default value for `number of simulations` is 100000
+    - For a single deck game, set the number_of_simulation to 1.
 
 ---
